@@ -1,0 +1,58 @@
+In this section we will write like a GAME Memory card.
+
+It's a simple exemple to have a more experience with JSX
+
+# steps to follow #
+
+1) First time we need to delete until file (for the moment) : src/App.test.js, src/index.css, src/logo.svg. (don't forggot to remove import line for these files in the other file).
+
+2) Go to : https://github.com/deliciousinsights/ocr-memory/tree/debut-jsx/src
+
+3) Download from this last the files : css (App.css, Card.css, GuessCount.css) AND structures files (Card.js, GuessCount.js) and puts it inside SRC folder.
+
+4) Change <title> of public/index.html from title to React Memory.
+
+5) Create component ( <Card /> ) have two parms or (props) :
+    
+    First props (card) : emoj to show.
+    Seconde props (feedback) : tell the current state of card ( visible or hidden).
+    
+    Code (Card.js) :
+    
+        const Card = ({ card, feedback }) => (
+          <div className={`card ${feedback}`}>
+            <span className="symbol">
+              {feedback === 'hidden' ? HIDDEN_SYMBOL : card}
+            </span>
+          </div>
+        )
+        
+6) Create component ( <GuessCount /> ) is a simple count  :
+  
+    Code (GuessCount.js) :
+    
+    const GuessCount = ({ guesses }) => <div className="guesses">{guesses}</div>
+    
+
+7) Create application component :
+
+    Code (App.js) :
+    
+    import Card from './Card'
+    import GuessCount from './GuessCount'
+
+    class App extends Component {
+      render() {
+        return (
+          <div className="memory">
+            <GuessCount guesses={0} />
+            <Card card="😀" feedback="hidden" />
+            <Card card="🎉" feedback="justMatched" />
+            <Card card="💖" feedback="justMismatched" />
+            <Card card="🎩" feedback="visible" />
+            <Card card="🐶" feedback="hidden" />
+            <Card card="🐱" feedback="justMatched" />
+          </div>
+        )
+      }
+    }

@@ -1,0 +1,30 @@
+(SOME README.MD OF COURS WAS NOTIFIED SO READ IT)
+
+############ REACT JS INSTALL ############
+
+# install node.js from official website (Lastest or high then 6).
+
+# install lastest npm : (npm install --global npm) "in cmd".
+
+# install create-react-app : (npm install --global create-react-app) "in cmd". (is a tool to make easy developpement an configure React-JS project)
+
+>
+
+############ CREATE REACT JS PROJECT ############
+
+# Open CMD into your folder project and do : create-react-app (name of your project : without spaces and all be lower character).
+
+# npm start : to start project.
+
+# ( src/index.js & oublic/index.html ) : are used by CRA.
+
+# Our files (CSS / JS / ...) Need to be inside "src" folder.
+
+############ COMMANDES ############
+
+# npm start : to start a project from the floder created by create-react-app, so your cmd need to be inside this folder.
+
+# yarn : qui est une alternative à la commande officielle  npm . Yarn est un client alternatif, mais ses avantages se sont considérablement réduits depuis la sortie de npm 5.
+
+# npm run build : Bundles the app into static files for production.
+
